@@ -13,6 +13,21 @@
         .auto-style1 {
             text-align: center;
         }
+        .auto-style2 {
+            width: 2768px;
+            height: 80px;
+        }
+        .auto-style3 {
+            width: 1245px;
+            height: 613px;
+        }
+        .auto-style4 {
+            height: 500px;
+            width: 2768px;
+        }
+        .auto-style5 {
+            width: 2768px;
+        }
     </style>
 </head>
 <body>
@@ -23,17 +38,17 @@
 
     <form id="form1" runat="server">
    
-      <table style="font-family:Arial">
+      <table style="font-family:Arial" class="auto-style3">
     <tr>
-        <td colspan="2" style="width:800px; height:80px; background-color:#ccffcc; 
-            text-align:center">
+        <td colspan="2" style="background-color:#C0C0C0; 
+            text-align:center" class="auto-style2">
             <h1 class="auto-style1">
                 <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" Font-Size="X-Large" NavigateUrl="~/Gallery.aspx">To Car Gallery</asp:HyperLink>
             </h1>
         </td>
     </tr>
     <tr>
-        <td style="height:500px; background-color:#ccffff; width:1800px; vertical-align:top">
+        <td style="background-color:#00FFFF; vertical-align:top" class="auto-style4">
                 
             <div>
         <%-- TODO: Enable partial rendering by setting the EnablePartialRendering attribute to "true" to provide a smoother browsing experience.
@@ -49,7 +64,7 @@
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="background-color:#ccffcc; text-align:center">
+        <td colspan="2" style="background-color:#FFFF00; text-align:center" class="auto-style5">
             &nbsp;</td>
     </tr>
 </table>

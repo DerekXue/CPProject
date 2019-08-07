@@ -26,10 +26,14 @@
             text-align: center;
             font-size: xx-large;
         }
+        .auto-style4 {
+            width: 1839px;
+            height: 645px;
+        }
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="auto-style4">
    
       <table style="font-family:Arial">
     <tr>

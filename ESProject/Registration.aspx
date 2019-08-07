@@ -47,14 +47,14 @@
    
       <table style="font-family:Arial">
     <tr>
-        <td colspan="2" style="width:800px; height:80px; background-color:#ccffcc; 
+        <td colspan="2" style="width:800px; height:80px; background-color:#C0C0C0; 
             text-align:center">
             <h1>
                 Registration Page</h1>
         </td>
     </tr>
     <tr>
-        <td style="height:500px; background-color:#ccffff; width:1800px; vertical-align:top">
+        <td style="height:500px; background-color:#00FFFF; width:1800px; vertical-align:top">
                 
             <div>
             <table class="auto-style1">
@@ -137,7 +137,7 @@
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="background-color:#ccffcc; ">
+        <td colspan="2" style="background-color:#FFFF00; ">
             &nbsp;</td>
     </tr>
 </table>

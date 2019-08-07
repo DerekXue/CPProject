@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Gallery.aspx.cs" Inherits="VideoGallary" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -16,10 +17,10 @@
    
       <table style="font-family:Arial">
     <tr>
-        <td colspan="2" style="width:800px; height:80px; background-color:#ccffcc; 
+        <td colspan="2" style="width:800px; height:80px; background-color:#C0C0C0; 
             text-align:center">
             <h1>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Welcome to Car Rental"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Salary Analysis System"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" Font-Size="X-Large" NavigateUrl="~/Login.aspx">To Login</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -28,27 +29,20 @@
         </td>
     </tr>
     <tr>
-        <td style="height:500px; background-color:#ccffff; width:1800px; vertical-align:top">
+        <td style="height:500px; background-color:#00FFFF; width:1800px; vertical-align:top">
                 
             <div>
-                <asp:Image ID="Image3" runat="server" Height="193px" ImageUrl="~/Photos/bmw-i8-350x200_sixt.png" Width="325px" />
-                <asp:Image ID="Image4" runat="server" Height="186px" ImageUrl="~/Photos/download (1).jpg" Width="286px" />
-                <asp:Image ID="Image5" runat="server" Height="185px" ImageUrl="~/Photos/46c51a619f4782987646c360114ac1d1.png" Width="290px" />
-                <asp:Image ID="Image6" runat="server" Height="181px" ImageUrl="~/Photos/new-audi-a7-sportback-5dr-front-three-quarter.jpg" Width="333px" />
-                <asp:Image ID="Image7" runat="server" Height="198px" ImageUrl="~/Photos/iris.png" Width="400px" />
-                <asp:Image ID="Image8" runat="server" Height="166px" ImageUrl="~/Photos/USC90HOC011A021001.jpg" Width="349px" />
             <br />
             <br />
         </div>
         <div class="auto-style6">
        
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" SelectCommand="SELECT * FROM [tblVideos]"></asp:SqlDataSource>
 
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="background-color:#ccffcc; text-align:center">
+        <td colspan="2" style="background-color:#FFFF00; text-align:center">
             &nbsp;</td>
     </tr>
 </table>
