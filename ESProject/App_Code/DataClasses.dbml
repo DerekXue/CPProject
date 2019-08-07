@@ -3,6 +3,7 @@
   <Table Name="dbo.Company" Member="Companies">
     <Type Name="Company">
       <Column Name="CompanyID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UniqueCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="CompanyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="PersonInCharge" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -21,6 +22,7 @@
   <Table Name="dbo.Department" Member="Departments">
     <Type Name="Department">
       <Column Name="DepartmentID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UniqueCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="CompanyID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -32,11 +34,15 @@
   <Table Name="dbo.Employee" Member="Employees">
     <Type Name="Employee">
       <Column Name="EmployeeID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UniqueCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DepartmentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PositionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PositionTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="EmployeeIC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Salary" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YearOfExperience" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="IfParttimer" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Employee_PartTimer" Member="PartTimers" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="PartTimer" />
       <Association Name="Department_Employee" Member="Department" ThisKey="DepartmentID" OtherKey="DepartmentID" Type="Department" IsForeignKey="true" />

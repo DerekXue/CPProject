@@ -114,6 +114,8 @@ public partial class Company : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _CompanyID;
 	
+	private string _UniqueCode;
+	
 	private string _CompanyName;
 	
 	private string _ContactNumber;
@@ -130,6 +132,8 @@ public partial class Company : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnCreated();
     partial void OnCompanyIDChanging(string value);
     partial void OnCompanyIDChanged();
+    partial void OnUniqueCodeChanging(string value);
+    partial void OnUniqueCodeChanged();
     partial void OnCompanyNameChanging(string value);
     partial void OnCompanyNameChanged();
     partial void OnContactNumberChanging(string value);
@@ -162,6 +166,26 @@ public partial class Company : INotifyPropertyChanging, INotifyPropertyChanged
 				this._CompanyID = value;
 				this.SendPropertyChanged("CompanyID");
 				this.OnCompanyIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UniqueCode", DbType="NVarChar(50)")]
+	public string UniqueCode
+	{
+		get
+		{
+			return this._UniqueCode;
+		}
+		set
+		{
+			if ((this._UniqueCode != value))
+			{
+				this.OnUniqueCodeChanging(value);
+				this.SendPropertyChanging();
+				this._UniqueCode = value;
+				this.SendPropertyChanged("UniqueCode");
+				this.OnUniqueCodeChanged();
 			}
 		}
 	}
@@ -451,6 +475,8 @@ public partial class Department : INotifyPropertyChanging, INotifyPropertyChange
 	
 	private string _DepartmentID;
 	
+	private string _UniqueCode;
+	
 	private string _CompanyID;
 	
 	private string _DepartmentName;
@@ -469,6 +495,8 @@ public partial class Department : INotifyPropertyChanging, INotifyPropertyChange
     partial void OnCreated();
     partial void OnDepartmentIDChanging(string value);
     partial void OnDepartmentIDChanged();
+    partial void OnUniqueCodeChanging(string value);
+    partial void OnUniqueCodeChanged();
     partial void OnCompanyIDChanging(string value);
     partial void OnCompanyIDChanged();
     partial void OnDepartmentNameChanging(string value);
@@ -502,6 +530,26 @@ public partial class Department : INotifyPropertyChanging, INotifyPropertyChange
 				this._DepartmentID = value;
 				this.SendPropertyChanged("DepartmentID");
 				this.OnDepartmentIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UniqueCode", DbType="NVarChar(50)")]
+	public string UniqueCode
+	{
+		get
+		{
+			return this._UniqueCode;
+		}
+		set
+		{
+			if ((this._UniqueCode != value))
+			{
+				this.OnUniqueCodeChanging(value);
+				this.SendPropertyChanging();
+				this._UniqueCode = value;
+				this.SendPropertyChanged("UniqueCode");
+				this.OnUniqueCodeChanged();
 			}
 		}
 	}
@@ -678,7 +726,13 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _EmployeeID;
 	
+	private string _UniqueCode;
+	
 	private string _DepartmentID;
+	
+	private string _PositionName;
+	
+	private string _PositionTitle;
 	
 	private string _EmployeeName;
 	
@@ -687,6 +741,8 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
 	private string _ContactNumber;
 	
 	private string _Salary;
+	
+	private string _YearOfExperience;
 	
 	private System.Nullable<int> _IfParttimer;
 	
@@ -700,8 +756,14 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnCreated();
     partial void OnEmployeeIDChanging(string value);
     partial void OnEmployeeIDChanged();
+    partial void OnUniqueCodeChanging(string value);
+    partial void OnUniqueCodeChanged();
     partial void OnDepartmentIDChanging(string value);
     partial void OnDepartmentIDChanged();
+    partial void OnPositionNameChanging(string value);
+    partial void OnPositionNameChanged();
+    partial void OnPositionTitleChanging(string value);
+    partial void OnPositionTitleChanged();
     partial void OnEmployeeNameChanging(string value);
     partial void OnEmployeeNameChanged();
     partial void OnEmployeeICChanging(string value);
@@ -710,6 +772,8 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnContactNumberChanged();
     partial void OnSalaryChanging(string value);
     partial void OnSalaryChanged();
+    partial void OnYearOfExperienceChanging(string value);
+    partial void OnYearOfExperienceChanged();
     partial void OnIfParttimerChanging(System.Nullable<int> value);
     partial void OnIfParttimerChanged();
     #endregion
@@ -741,6 +805,26 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UniqueCode", DbType="NVarChar(50)")]
+	public string UniqueCode
+	{
+		get
+		{
+			return this._UniqueCode;
+		}
+		set
+		{
+			if ((this._UniqueCode != value))
+			{
+				this.OnUniqueCodeChanging(value);
+				this.SendPropertyChanging();
+				this._UniqueCode = value;
+				this.SendPropertyChanged("UniqueCode");
+				this.OnUniqueCodeChanged();
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="NVarChar(50)")]
 	public string DepartmentID
 	{
@@ -761,6 +845,46 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
 				this._DepartmentID = value;
 				this.SendPropertyChanged("DepartmentID");
 				this.OnDepartmentIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PositionName", DbType="NVarChar(50)")]
+	public string PositionName
+	{
+		get
+		{
+			return this._PositionName;
+		}
+		set
+		{
+			if ((this._PositionName != value))
+			{
+				this.OnPositionNameChanging(value);
+				this.SendPropertyChanging();
+				this._PositionName = value;
+				this.SendPropertyChanged("PositionName");
+				this.OnPositionNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PositionTitle", DbType="NVarChar(50)")]
+	public string PositionTitle
+	{
+		get
+		{
+			return this._PositionTitle;
+		}
+		set
+		{
+			if ((this._PositionTitle != value))
+			{
+				this.OnPositionTitleChanging(value);
+				this.SendPropertyChanging();
+				this._PositionTitle = value;
+				this.SendPropertyChanged("PositionTitle");
+				this.OnPositionTitleChanged();
 			}
 		}
 	}
@@ -841,6 +965,26 @@ public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
 				this._Salary = value;
 				this.SendPropertyChanged("Salary");
 				this.OnSalaryChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YearOfExperience", DbType="NVarChar(50)")]
+	public string YearOfExperience
+	{
+		get
+		{
+			return this._YearOfExperience;
+		}
+		set
+		{
+			if ((this._YearOfExperience != value))
+			{
+				this.OnYearOfExperienceChanging(value);
+				this.SendPropertyChanging();
+				this._YearOfExperience = value;
+				this.SendPropertyChanged("YearOfExperience");
+				this.OnYearOfExperienceChanged();
 			}
 		}
 	}
