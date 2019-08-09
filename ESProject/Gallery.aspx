@@ -12,6 +12,9 @@
         .auto-style6 {
             text-align: center;
         }
+        .auto-style7 {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -35,8 +38,9 @@
     <tr>
         <td style="height:500px; background-color:#00FFFF; width:1800px; vertical-align:top">
                 
-            <div>
+            <div class="auto-style7">
             <br />
+            <asp:HyperLink ID="HyperLink3" runat="server" Font-Bold="True" Font-Size="X-Large" NavigateUrl="~/MachineLearning.aspx">To Machine Learning Prediction</asp:HyperLink>
             <br />
         </div>
         <div class="auto-style6">
